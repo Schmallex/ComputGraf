@@ -16,6 +16,6 @@ public class Background implements Shape {
         this.material=material;
     }
     public Hit intersect(Ray r){
-        return new Hit(800000,vec3(8000,8000,8000),material,vec3(0,0.,0));
+        return new Hit(800000,vec3(8000,8000,8000),material);
     }
 }

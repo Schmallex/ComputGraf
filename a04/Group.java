@@ -20,7 +20,7 @@ public class Group implements Shape {
     public Hit intersect(Ray r){
         double t =Double.POSITIVE_INFINITY;
 
-        Hit hit =new Hit(t,vec3(0,0,0),new Diffus(2,vec3(0.5,0.5,0.5)),vec3(0.5,0.5,0.5));
+        Hit hit =new Hit(t,vec3(0,0,0),new Diffus(2,vec3(0.5,0.5,0.5)));
         for (Shape s:shapes) {
 
             Hit h =s.intersect(r);

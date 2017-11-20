@@ -16,13 +16,13 @@ public class Kugel implements Shape{
     public double rad;
     public Vec3 cm;
     public Material material;
-    public Vec3 colour;
 
-    public Kugel( Vec3 c,double r,Material material,Vec3 colour) {
+
+    public Kugel( Vec3 c,double r,Material material) {
         this.rad = r;
         this.cm = c;
         this.material=material;
-        this.colour=colour;
+
     }
 
 
@@ -49,8 +49,7 @@ public class Kugel implements Shape{
             t = Math.min(t1, t2);
         }
         Vec3 treff = r.pointAt(t);
-        Vec3 normtreff = normalize(subtract(pos, cm));
-        return new Hit(t, treff, material,colour);
+        return new Hit(t, treff, material);
     }
 
 }

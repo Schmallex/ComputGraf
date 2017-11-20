@@ -15,14 +15,14 @@ public class Plane implements Shape {
     public Material material ;
     public Vec3 n;
     public Vec3 punkt;
-    public Vec3 colour;
 
 
-    public Plane(Vec3 punkt ,Vec3 n,Material material,Vec3 colour){
+
+    public Plane(Vec3 punkt ,Vec3 n,Material material){
         this.n=n;
         this.punkt = punkt;
         this.material=material;
-        this.colour=colour;
+
     }
 
     public Hit intersect(Ray r){
@@ -32,7 +32,7 @@ public class Plane implements Shape {
             return null;
         }
         Vec3 treff = r.pointAt(t);
-        return new Hit(t,treff,material,colour);
+        return new Hit(t,treff,material);
 
 
     }

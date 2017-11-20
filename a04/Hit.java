@@ -10,11 +10,11 @@ public class Hit {
     public double t;
     public Vec3 posTreff;
     public Material material;
-    public Vec3 colour;
-    public Hit(double t, Vec3 posTreff,Material material,Vec3 colour) {
+
+    public Hit(double t, Vec3 posTreff,Material material) {
         this.t = t;
         this.posTreff = posTreff;
         this.material=material;
-        this.colour=colour;
+
     }
 }
